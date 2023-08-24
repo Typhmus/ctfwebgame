@@ -47,4 +47,7 @@ function resetGame() {
   // Reset the ball's position to the original position
   ball.style.left = '0px';
   ball.style.top = '0px';
+
+  // Hide the win message
+  winMessage.style.display = 'none';
 }
