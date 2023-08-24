@@ -38,7 +38,7 @@ function checkWin() {
     ballCenterY <= flagRect.bottom
   ) {
     winMessage.style.display = 'block';
-    new Audio('win-sound.mp3').play();
+    new Audio('win-sound.mp3?v=1').play();
     resetGame();
   }
 }
