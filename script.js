@@ -39,6 +39,12 @@ function checkWin() {
   ) {
     winMessage.style.display = 'block';
     new Audio('win-sound.mp3').play();
+    resetGame();
   }
 }
 
+function resetGame() {
+  // Reset the ball's position to the original position
+  ball.style.left = '0px';
+  ball.style.top = '0px';
+}
