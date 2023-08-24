@@ -27,8 +27,18 @@ document.addEventListener('mouseup', () => {
 function checkWin() {
   const ballRect = ball.getBoundingClientRect();
   const flagRect = flag.getBoundingClientRect();
-  if (ballRect.right >= flagRect.left) {
+
+  const ballCenterX = ballRect.left + ballRect.width / 2;
+  const ballCenterY = ballRect.top + ballRect.height / 2;
+
+  if (
+    ballCenterX >= flagRect.left &&
+    ballCenterX <= flagRect.right &&
+    ballCenterY >= flagRect.top &&
+    ballCenterY <= flagRect.bottom
+  ) {
     winMessage.style.display = 'block';
     new Audio('win-sound.mp3').play();
   }
 }
+
